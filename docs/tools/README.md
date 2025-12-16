@@ -81,6 +81,7 @@ const { chromium } = require('playwright');
 **Example (Python)**:
 ```python
 from appium import webdriver
+from appium.webdriver.common.appiumby import By
 
 desired_caps = {
     'platformName': 'Android',
@@ -89,7 +90,7 @@ desired_caps = {
 }
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-driver.find_element_by_id('com.example:id/button').click()
+driver.find_element(By.ID, 'com.example:id/button').click()
 driver.quit()
 ```
 

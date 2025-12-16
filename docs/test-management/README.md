@@ -325,9 +325,9 @@ Defect Removal Efficiency = (Defects Found Before Release / Total Defects) × 10
 
 #### 3. Test Execution Metrics
 ```
-Test Execution Rate = Tests Executed / Total Tests × 100%
-Pass Percentage = Passed Tests / Total Tests × 100%
-Fail Percentage = Failed Tests / Total Tests × 100%
+Test Execution Rate = (Tests Executed / Total Tests) × 100%
+Pass Percentage = (Passed Tests / Total Tests) × 100%
+Fail Percentage = (Failed Tests / Total Tests) × 100%
 ```
 
 #### 4. Test Progress Metrics
