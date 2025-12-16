@@ -319,6 +319,7 @@ Code Coverage = (Lines of Code Executed / Total Lines of Code) × 100%
 #### 2. Defect Metrics
 ```
 Defect Density = Total Defects / Size of Software (KLOC)
+  (KLOC = Kilo Lines of Code, i.e., thousands of lines of code)
 Defect Detection Percentage = (Defects Found in Testing / Total Defects) × 100%
 Defect Removal Efficiency = (Defects Found Before Release / Total Defects) × 100%
 ```
