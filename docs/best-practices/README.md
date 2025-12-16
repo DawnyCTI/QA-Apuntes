@@ -28,8 +28,8 @@
    /   API    \
   /------------\
  /              \
-/   Unitarias   \
-------------------
+/ Pruebas Unitarias \
+----------------------
 ```
 
 **Concepto**: Equilibrar diferentes tipos de pruebas

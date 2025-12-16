@@ -342,7 +342,7 @@ import { check } from 'k6';
 export default function () {
   let response = http.get('https://example.com');
   check(response, {
-    'estado es 200': (r) => r.status === 200,
+    'código de estado es 200': (r) => r.status === 200,
   });
 }
 ```
