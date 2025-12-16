@@ -1,56 +1,56 @@
-# QA-Apuntes (QA Notes)
+# QA-Apuntes
 
-> A comprehensive guide to Quality Assurance concepts, methodologies, and best practices.
+> Una guía completa sobre conceptos, metodologías y mejores prácticas de Aseguramiento de Calidad.
 
-## 📚 About
+## 📚 Acerca de
 
-This repository contains structured notes and documentation about Quality Assurance (QA) testing. It serves as a learning resource and reference guide for QA engineers, developers, and anyone interested in software quality.
+Este repositorio contiene notas estructuradas y documentación sobre pruebas de Aseguramiento de Calidad (QA). Sirve como recurso de aprendizaje y guía de referencia para ingenieros de QA, desarrolladores y cualquier persona interesada en la calidad del software.
 
-## 📖 Contents
+## 📖 Contenido
 
-### 1. [Fundamentals](docs/fundamentals/README.md)
-- Introduction to QA
-- Types of Testing
-- Testing Principles
-- SDLC and Testing Life Cycle
+### 1. [Fundamentos](docs/fundamentals/README.md)
+- Introducción a QA
+- Tipos de Pruebas
+- Principios de Testing
+- SDLC y Ciclo de Vida de Pruebas
 
-### 2. [Testing Types](docs/testing-types/README.md)
-- Manual Testing
-- Automated Testing
-- Performance Testing
-- Security Testing
-- Usability Testing
-- Regression Testing
-- And more...
+### 2. [Tipos de Pruebas](docs/testing-types/README.md)
+- Pruebas Manuales
+- Pruebas Automatizadas
+- Pruebas de Rendimiento
+- Pruebas de Seguridad
+- Pruebas de Usabilidad
+- Pruebas de Regresión
+- Y más...
 
-### 3. [Test Design & Management](docs/test-management/README.md)
-- Test Planning
-- Test Case Design
-- Test Data Management
-- Bug Tracking and Reporting
-- Test Metrics
+### 3. [Diseño y Gestión de Pruebas](docs/test-management/README.md)
+- Planificación de Pruebas
+- Diseño de Casos de Prueba
+- Gestión de Datos de Prueba
+- Seguimiento y Reporte de Errores
+- Métricas de Prueba
 
-### 4. [Tools & Technologies](docs/tools/README.md)
-- Testing Frameworks
-- CI/CD Integration
-- Test Automation Tools
-- Bug Tracking Systems
-- Performance Testing Tools
+### 4. [Herramientas y Tecnologías](docs/tools/README.md)
+- Frameworks de Pruebas
+- Integración CI/CD
+- Herramientas de Automatización
+- Sistemas de Seguimiento de Errores
+- Herramientas de Pruebas de Rendimiento
 
-### 5. [Best Practices](docs/best-practices/README.md)
-- Testing Strategies
-- Code Quality
-- Test Maintenance
-- Team Collaboration
+### 5. [Mejores Prácticas](docs/best-practices/README.md)
+- Estrategias de Testing
+- Calidad de Código
+- Mantenimiento de Pruebas
+- Colaboración en Equipo
 
-## 🚀 Getting Started
+## 🚀 Comenzando
 
-Each section contains detailed documentation with examples and practical guidance. Navigate to any topic to learn more.
+Cada sección contiene documentación detallada con ejemplos y guía práctica. Navega a cualquier tema para aprender más.
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-Contributions are welcome! Feel free to add more notes, improve existing content, or suggest new topics.
+¡Las contribuciones son bienvenidas! Siéntete libre de agregar más notas, mejorar el contenido existente o sugerir nuevos temas.
 
-## 📝 License
+## 📝 Licencia
 
-This is an educational resource. Feel free to use and share.
+Este es un recurso educativo. Siéntete libre de usar y compartir.

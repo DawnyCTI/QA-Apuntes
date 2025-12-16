@@ -1,143 +1,143 @@
-# QA Fundamentals
+# Fundamentos de QA
 
-## What is Quality Assurance?
+## ¿Qué es el Aseguramiento de Calidad?
 
-Quality Assurance (QA) is a systematic process of determining whether a product or service meets specified requirements. It focuses on improving and stabilizing production and associated processes to avoid or at least minimize issues that lead to defects.
+El Aseguramiento de Calidad (QA) es un proceso sistemático para determinar si un producto o servicio cumple con los requisitos especificados. Se enfoca en mejorar y estabilizar la producción y los procesos asociados para evitar o al menos minimizar los problemas que conducen a defectos.
 
-### Key Objectives of QA
-- Ensure product quality meets customer expectations
-- Identify defects before production release
-- Reduce costs by catching issues early
-- Improve development processes
-- Build customer confidence and trust
+### Objetivos Clave de QA
+- Asegurar que la calidad del producto cumpla con las expectativas del cliente
+- Identificar defectos antes del lanzamiento a producción
+- Reducir costos al detectar problemas tempranamente
+- Mejorar los procesos de desarrollo
+- Construir confianza del cliente
 
-## Types of Testing
+## Tipos de Pruebas
 
-### 1. Functional Testing
-Validates that the software functions according to requirements.
-- **Unit Testing**: Testing individual components
-- **Integration Testing**: Testing component interactions
-- **System Testing**: Testing the complete system
-- **Acceptance Testing**: Validating against business requirements
+### 1. Pruebas Funcionales
+Valida que el software funcione según los requisitos.
+- **Pruebas Unitarias**: Prueba de componentes individuales
+- **Pruebas de Integración**: Prueba de interacciones entre componentes
+- **Pruebas de Sistema**: Prueba del sistema completo
+- **Pruebas de Aceptación**: Validación contra requisitos del negocio
 
-### 2. Non-Functional Testing
-Focuses on aspects like performance, usability, and reliability.
-- **Performance Testing**: Speed, scalability, stability
-- **Security Testing**: Vulnerabilities and threats
-- **Usability Testing**: User experience
-- **Compatibility Testing**: Different environments
+### 2. Pruebas No Funcionales
+Se enfoca en aspectos como rendimiento, usabilidad y confiabilidad.
+- **Pruebas de Rendimiento**: Velocidad, escalabilidad, estabilidad
+- **Pruebas de Seguridad**: Vulnerabilidades y amenazas
+- **Pruebas de Usabilidad**: Experiencia del usuario
+- **Pruebas de Compatibilidad**: Diferentes entornos
 
-### 3. Maintenance Testing
-- **Regression Testing**: Ensuring changes don't break existing functionality
-- **Smoke Testing**: Basic functionality checks
-- **Sanity Testing**: Focused verification of specific functionality
+### 3. Pruebas de Mantenimiento
+- **Pruebas de Regresión**: Asegurar que los cambios no rompan funcionalidad existente
+- **Pruebas de Humo**: Verificaciones básicas de funcionalidad
+- **Pruebas de Sanidad**: Verificación enfocada de funcionalidad específica
 
-## Testing Principles
+## Principios de Testing
 
-### 1. Testing shows presence of defects
-Testing can prove that defects exist but cannot prove that there are no defects.
+### 1. Las pruebas muestran presencia de defectos
+Las pruebas pueden demostrar que existen defectos pero no pueden demostrar que no hay defectos.
 
-### 2. Exhaustive testing is impossible
-Testing everything is not feasible; risk-based testing is necessary.
+### 2. Las pruebas exhaustivas son imposibles
+Probar todo no es factible; es necesario realizar pruebas basadas en riesgos.
 
-### 3. Early testing
-Testing activities should start as early as possible in the SDLC.
+### 3. Pruebas tempranas
+Las actividades de prueba deben comenzar lo más temprano posible en el SDLC.
 
-### 4. Defect clustering
-A small number of modules usually contain most of the defects.
+### 4. Agrupación de defectos
+Un pequeño número de módulos suele contener la mayoría de los defectos.
 
-### 5. Pesticide paradox
-Running the same tests repeatedly will eventually stop finding new bugs.
+### 5. Paradoja del pesticida
+Ejecutar las mismas pruebas repetidamente eventualmente dejará de encontrar nuevos errores.
 
-### 6. Testing is context-dependent
-Testing approach varies based on the context of the application.
+### 6. Las pruebas dependen del contexto
+El enfoque de pruebas varía según el contexto de la aplicación.
 
-### 7. Absence of errors fallacy
-Finding and fixing defects does not help if the system is unusable.
+### 7. Falacia de ausencia de errores
+Encontrar y corregir defectos no ayuda si el sistema es inutilizable.
 
-## Software Development Life Cycle (SDLC)
+## Ciclo de Vida del Desarrollo de Software (SDLC)
 
-### Common SDLC Models
+### Modelos Comunes de SDLC
 
-#### Waterfall Model
-- Sequential approach
-- Each phase must be completed before the next begins
-- Best for: Well-defined requirements
+#### Modelo en Cascada
+- Enfoque secuencial
+- Cada fase debe completarse antes de comenzar la siguiente
+- Mejor para: Requisitos bien definidos
 
-#### Agile Model
-- Iterative and incremental approach
-- Continuous feedback and adaptation
-- Best for: Rapidly changing requirements
+#### Modelo Ágil
+- Enfoque iterativo e incremental
+- Retroalimentación y adaptación continua
+- Mejor para: Requisitos que cambian rápidamente
 
-#### V-Model
-- Verification and Validation model
-- Testing activities parallel to development
-- Best for: Projects requiring high reliability
+#### Modelo en V
+- Modelo de Verificación y Validación
+- Actividades de prueba paralelas al desarrollo
+- Mejor para: Proyectos que requieren alta confiabilidad
 
 #### DevOps
-- Collaboration between development and operations
-- Continuous integration and delivery
-- Best for: Fast-paced, cloud-based applications
+- Colaboración entre desarrollo y operaciones
+- Integración y entrega continua
+- Mejor para: Aplicaciones en la nube de ritmo rápido
 
-## Testing Life Cycle (STLC)
+## Ciclo de Vida de Pruebas (STLC)
 
-### 1. Requirement Analysis
-- Understand requirements
-- Identify testable requirements
-- Determine test approach
+### 1. Análisis de Requisitos
+- Comprender requisitos
+- Identificar requisitos probables
+- Determinar enfoque de prueba
 
-### 2. Test Planning
-- Define test strategy
-- Estimate resources and timeline
-- Identify risks
+### 2. Planificación de Pruebas
+- Definir estrategia de prueba
+- Estimar recursos y cronograma
+- Identificar riesgos
 
-### 3. Test Case Development
-- Create test cases
-- Prepare test data
-- Set up test environment
+### 3. Desarrollo de Casos de Prueba
+- Crear casos de prueba
+- Preparar datos de prueba
+- Configurar entorno de prueba
 
-### 4. Test Environment Setup
-- Configure hardware and software
-- Prepare test data
-- Verify environment readiness
+### 4. Configuración del Entorno de Prueba
+- Configurar hardware y software
+- Preparar datos de prueba
+- Verificar disponibilidad del entorno
 
-### 5. Test Execution
-- Run test cases
-- Log defects
-- Re-test fixed defects
+### 5. Ejecución de Pruebas
+- Ejecutar casos de prueba
+- Registrar defectos
+- Re-probar defectos corregidos
 
-### 6. Test Closure
-- Evaluate test completion criteria
-- Document lessons learned
-- Archive test artifacts
+### 6. Cierre de Pruebas
+- Evaluar criterios de completitud de pruebas
+- Documentar lecciones aprendidas
+- Archivar artefactos de prueba
 
-## Quality Metrics
+## Métricas de Calidad
 
-### Key Metrics to Track
-- **Defect Density**: Defects per unit of code
-- **Test Coverage**: Percentage of code/requirements tested
-- **Defect Detection Percentage**: Defects found in testing vs. production
-- **Test Execution Rate**: Tests executed vs. planned
-- **Defect Resolution Time**: Average time to fix defects
+### Métricas Clave a Rastrear
+- **Densidad de Defectos**: Defectos por unidad de código
+- **Cobertura de Pruebas**: Porcentaje de código/requisitos probados
+- **Porcentaje de Detección de Defectos**: Defectos encontrados en pruebas vs. producción
+- **Tasa de Ejecución de Pruebas**: Pruebas ejecutadas vs. planificadas
+- **Tiempo de Resolución de Defectos**: Tiempo promedio para corregir defectos
 
-## Roles in QA
+## Roles en QA
 
-### QA Engineer
-- Design and execute test cases
-- Report and track defects
-- Verify fixes
+### Ingeniero de QA
+- Diseñar y ejecutar casos de prueba
+- Reportar y rastrear defectos
+- Verificar correcciones
 
-### QA Lead
-- Plan testing activities
-- Manage test team
-- Report to stakeholders
+### Líder de QA
+- Planificar actividades de prueba
+- Gestionar equipo de pruebas
+- Reportar a las partes interesadas
 
-### Test Automation Engineer
-- Develop automated test scripts
-- Maintain automation framework
-- Integrate tests with CI/CD
+### Ingeniero de Automatización de Pruebas
+- Desarrollar scripts de prueba automatizados
+- Mantener framework de automatización
+- Integrar pruebas con CI/CD
 
-### Performance Test Engineer
-- Design and execute performance tests
-- Analyze performance bottlenecks
-- Recommend optimizations
+### Ingeniero de Pruebas de Rendimiento
+- Diseñar y ejecutar pruebas de rendimiento
+- Analizar cuellos de botella de rendimiento
+- Recomendar optimizaciones

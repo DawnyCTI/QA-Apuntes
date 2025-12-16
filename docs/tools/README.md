@@ -1,18 +1,18 @@
-# Tools & Technologies
+# Herramientas y Tecnologías
 
-## Testing Frameworks
+## Frameworks de Pruebas
 
-### Web Testing Frameworks
+### Frameworks de Pruebas Web
 
 #### Selenium
-**Description**: Open-source framework for automating web browsers
+**Descripción**: Framework de código abierto para automatizar navegadores web
 
-**Key Features**:
-- Cross-browser support (Chrome, Firefox, Safari, Edge)
-- Multiple language bindings (Java, Python, C#, JavaScript)
-- Large community and extensive documentation
+**Características Clave**:
+- Soporte multi-navegador (Chrome, Firefox, Safari, Edge)
+- Múltiples lenguajes (Java, Python, C#, JavaScript)
+- Gran comunidad y documentación extensa
 
-**Example (Python)**:
+**Ejemplo (Python)**:
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -25,18 +25,18 @@ driver.quit()
 ```
 
 #### Cypress
-**Description**: Modern end-to-end testing framework for web applications
+**Descripción**: Framework moderno de pruebas end-to-end para aplicaciones web
 
-**Key Features**:
-- Fast, easy setup
-- Automatic waiting
-- Time travel debugging
-- Real-time reloads
+**Características Clave**:
+- Rápido, configuración fácil
+- Espera automática
+- Depuración con viaje en el tiempo
+- Recarga en tiempo real
 
-**Example (JavaScript)**:
+**Ejemplo (JavaScript)**:
 ```javascript
-describe('Login Test', () => {
-  it('should login successfully', () => {
+describe('Prueba de Inicio de Sesión', () => {
+  it('debería iniciar sesión exitosamente', () => {
     cy.visit('/login')
     cy.get('#username').type('testuser')
     cy.get('#password').type('password123')
@@ -47,15 +47,15 @@ describe('Login Test', () => {
 ```
 
 #### Playwright
-**Description**: Modern automation framework by Microsoft
+**Descripción**: Framework de automatización moderno de Microsoft
 
-**Key Features**:
-- Cross-browser support
-- Auto-wait capabilities
-- Network interception
-- Mobile emulation
+**Características Clave**:
+- Soporte multi-navegador
+- Capacidades de espera automática
+- Intercepción de red
+- Emulación móvil
 
-**Example (JavaScript)**:
+**Ejemplo (JavaScript)**:
 ```javascript
 const { chromium } = require('playwright');
 
@@ -68,17 +68,17 @@ const { chromium } = require('playwright');
 })();
 ```
 
-### Mobile Testing Frameworks
+### Frameworks de Pruebas Móviles
 
 #### Appium
-**Description**: Open-source automation framework for mobile apps
+**Descripción**: Framework de automatización de código abierto para aplicaciones móviles
 
-**Key Features**:
-- Cross-platform (iOS and Android)
-- Supports native, hybrid, and web apps
-- Multiple language support
+**Características Clave**:
+- Multiplataforma (iOS y Android)
+- Soporta aplicaciones nativas, híbridas y web
+- Soporte de múltiples lenguajes
 
-**Example (Python)**:
+**Ejemplo (Python)**:
 ```python
 from appium import webdriver
 from appium.webdriver.common.appiumby import By
@@ -95,19 +95,19 @@ driver.quit()
 ```
 
 #### Detox
-**Description**: Gray box end-to-end testing framework for React Native
+**Descripción**: Framework de pruebas end-to-end de caja gris para React Native
 
-**Key Features**:
-- Fast execution
-- Automatic synchronization
-- Cross-platform
+**Características Clave**:
+- Ejecución rápida
+- Sincronización automática
+- Multiplataforma
 
-### API Testing Frameworks
+### Frameworks de Pruebas de API
 
 #### REST Assured (Java)
-**Description**: Java library for testing REST APIs
+**Descripción**: Biblioteca Java para probar APIs REST
 
-**Example**:
+**Ejemplo**:
 ```java
 given()
     .contentType("application/json")
@@ -120,16 +120,16 @@ given()
 ```
 
 #### Postman/Newman
-**Description**: API development and testing platform
+**Descripción**: Plataforma de desarrollo y pruebas de API
 
-**Key Features**:
-- Collection runner
-- Automated testing
-- CI/CD integration
-- Environment management
+**Características Clave**:
+- Ejecutor de colecciones
+- Pruebas automatizadas
+- Integración CI/CD
+- Gestión de entornos
 
 #### pytest-requests (Python)
-**Example**:
+**Ejemplo**:
 ```python
 import requests
 
@@ -139,7 +139,7 @@ def test_api_endpoint():
     assert 'users' in response.json()
 ```
 
-### Unit Testing Frameworks
+### Frameworks de Pruebas Unitarias
 
 #### JUnit (Java)
 ```java
@@ -166,7 +166,7 @@ def test_subtraction():
 
 #### Jest (JavaScript)
 ```javascript
-test('adds 1 + 2 to equal 3', () => {
+test('suma 1 + 2 para igualar 3', () => {
   expect(sum(1, 2)).toBe(3);
 });
 ```
@@ -181,20 +181,20 @@ public void TestAddition()
 }
 ```
 
-## CI/CD Integration
+## Integración CI/CD
 
-### What is CI/CD?
-**Continuous Integration (CI)**: Automatically building and testing code changes
-**Continuous Delivery (CD)**: Automatically deploying code to production
+### ¿Qué es CI/CD?
+**Integración Continua (CI)**: Construcción y prueba automática de cambios de código
+**Entrega Continua (CD)**: Despliegue automático de código a producción
 
-### Popular CI/CD Platforms
+### Plataformas CI/CD Populares
 
 #### GitHub Actions
-**Description**: Native CI/CD for GitHub repositories
+**Descripción**: CI/CD nativo para repositorios de GitHub
 
-**Example Workflow**:
+**Ejemplo de Flujo de Trabajo**:
 ```yaml
-name: Test Suite
+name: Suite de Pruebas
 
 on: [push, pull_request]
 
@@ -203,40 +203,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python
+      - name: Configurar Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
-      - name: Install dependencies
+      - name: Instalar dependencias
         run: pip install -r requirements.txt
-      - name: Run tests
+      - name: Ejecutar pruebas
         run: pytest
 ```
 
 #### Jenkins
-**Description**: Open-source automation server
+**Descripción**: Servidor de automatización de código abierto
 
-**Key Features**:
-- Extensive plugin ecosystem
-- Distributed builds
-- Pipeline as code
+**Características Clave**:
+- Ecosistema extenso de plugins
+- Construcciones distribuidas
+- Pipeline como código
 
-**Example Pipeline**:
+**Ejemplo de Pipeline**:
 ```groovy
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Construcción') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('Test') {
+        stage('Pruebas') {
             steps {
                 sh 'npm test'
             }
         }
-        stage('Deploy') {
+        stage('Despliegue') {
             steps {
                 sh 'npm run deploy'
             }
@@ -246,9 +246,9 @@ pipeline {
 ```
 
 #### GitLab CI
-**Description**: Integrated CI/CD platform
+**Descripción**: Plataforma CI/CD integrada
 
-**Example (.gitlab-ci.yml)**:
+**Ejemplo (.gitlab-ci.yml)**:
 ```yaml
 stages:
   - test
@@ -269,9 +269,9 @@ deploy:
 ```
 
 #### CircleCI
-**Description**: Cloud-based CI/CD platform
+**Descripción**: Plataforma CI/CD basada en la nube
 
-**Example (config.yml)**:
+**Ejemplo (config.yml)**:
 ```yaml
 version: 2.1
 jobs:
@@ -285,56 +285,56 @@ jobs:
 ```
 
 #### Azure DevOps
-**Description**: Microsoft's DevOps platform
+**Descripción**: Plataforma DevOps de Microsoft
 
-**Key Features**:
+**Características Clave**:
 - Azure Pipelines
-- Test Plans
-- Artifacts management
+- Planes de prueba
+- Gestión de artefactos
 
-## Performance Testing Tools
+## Herramientas de Pruebas de Rendimiento
 
 ### Apache JMeter
-**Description**: Open-source load testing tool
+**Descripción**: Herramienta de pruebas de carga de código abierto
 
-**Key Features**:
-- Protocol support (HTTP, FTP, JDBC, SOAP)
-- Distributed testing
-- Extensive plugins
+**Características Clave**:
+- Soporte de protocolos (HTTP, FTP, JDBC, SOAP)
+- Pruebas distribuidas
+- Plugins extensos
 
-**Use Cases**:
-- Web applications
+**Casos de Uso**:
+- Aplicaciones web
 - APIs
-- Databases
+- Bases de datos
 
 ### Gatling
-**Description**: High-performance load testing tool
+**Descripción**: Herramienta de pruebas de carga de alto rendimiento
 
-**Key Features**:
-- Scala-based DSL
-- Detailed reports
-- CI/CD friendly
+**Características Clave**:
+- DSL basado en Scala
+- Informes detallados
+- Compatible con CI/CD
 
-**Example**:
+**Ejemplo**:
 ```scala
-scenario("User Journey")
-  .exec(http("Homepage")
+scenario("Viaje del Usuario")
+  .exec(http("Página Principal")
     .get("/"))
   .pause(2)
-  .exec(http("Login")
+  .exec(http("Inicio de Sesión")
     .post("/login")
     .body(StringBody("""{"username":"test","password":"pass"}""")))
 ```
 
 ### K6
-**Description**: Modern load testing tool
+**Descripción**: Herramienta moderna de pruebas de carga
 
-**Key Features**:
-- JavaScript-based
-- Developer-friendly
-- Cloud execution
+**Características Clave**:
+- Basado en JavaScript
+- Amigable para desarrolladores
+- Ejecución en la nube
 
-**Example**:
+**Ejemplo**:
 ```javascript
 import http from 'k6/http';
 import { check } from 'k6';
@@ -342,15 +342,15 @@ import { check } from 'k6';
 export default function () {
   let response = http.get('https://example.com');
   check(response, {
-    'status is 200': (r) => r.status === 200,
+    'estado es 200': (r) => r.status === 200,
   });
 }
 ```
 
 ### Locust
-**Description**: Python-based load testing tool
+**Descripción**: Herramienta de pruebas de carga basada en Python
 
-**Example**:
+**Ejemplo**:
 ```python
 from locust import HttpUser, task, between
 
@@ -366,84 +366,84 @@ class WebsiteUser(HttpUser):
         self.client.get("/about")
 ```
 
-## Bug Tracking Systems
+## Sistemas de Seguimiento de Errores
 
 ### JIRA
-**Description**: Popular issue and project tracking software
+**Descripción**: Software popular de seguimiento de problemas y proyectos
 
-**Key Features**:
-- Agile boards (Scrum/Kanban)
-- Customizable workflows
-- Extensive integrations
-- Reporting and dashboards
+**Características Clave**:
+- Tableros ágiles (Scrum/Kanban)
+- Flujos de trabajo personalizables
+- Integraciones extensas
+- Informes y tableros
 
-**Best For**: Enterprise teams, Agile development
+**Mejor Para**: Equipos empresariales, desarrollo ágil
 
 ### GitHub Issues
-**Description**: Integrated issue tracking in GitHub
+**Descripción**: Seguimiento de problemas integrado en GitHub
 
-**Key Features**:
-- Pull request integration
-- Labels and milestones
-- Project boards
-- Free for public repositories
+**Características Clave**:
+- Integración con pull requests
+- Etiquetas y milestones
+- Tableros de proyecto
+- Gratis para repositorios públicos
 
-**Best For**: Open-source projects, small teams
+**Mejor Para**: Proyectos de código abierto, equipos pequeños
 
 ### Azure DevOps Boards
-**Description**: Work tracking system in Azure DevOps
+**Descripción**: Sistema de seguimiento de trabajo en Azure DevOps
 
-**Key Features**:
-- Work items
-- Boards and backlogs
-- Queries and charts
+**Características Clave**:
+- Elementos de trabajo
+- Tableros y backlogs
+- Consultas y gráficos
 
-**Best For**: Microsoft ecosystem, enterprise
+**Mejor Para**: Ecosistema Microsoft, empresa
 
 ### Bugzilla
-**Description**: Open-source bug tracking system
+**Descripción**: Sistema de seguimiento de errores de código abierto
 
-**Key Features**:
-- Advanced search
-- Email notifications
-- Time tracking
-- Customizable
+**Características Clave**:
+- Búsqueda avanzada
+- Notificaciones por correo
+- Seguimiento de tiempo
+- Personalizable
 
-**Best For**: Organizations wanting self-hosted solution
+**Mejor Para**: Organizaciones que desean solución auto-hospedada
 
 ### Linear
-**Description**: Modern issue tracking for software teams
+**Descripción**: Seguimiento moderno de problemas para equipos de software
 
-**Key Features**:
-- Fast and responsive
-- Keyboard shortcuts
-- GitHub integration
-- Clean interface
+**Características Clave**:
+- Rápido y responsivo
+- Atajos de teclado
+- Integración con GitHub
+- Interfaz limpia
 
-**Best For**: Fast-moving startups, product teams
+**Mejor Para**: Startups de rápido movimiento, equipos de producto
 
-## Code Quality Tools
+## Herramientas de Calidad de Código
 
 ### SonarQube
-**Description**: Code quality and security analysis platform
+**Descripción**: Plataforma de análisis de calidad y seguridad de código
 
-**Key Features**:
-- Code smells detection
-- Security vulnerabilities
-- Technical debt measurement
-- Multiple language support
+**Características Clave**:
+- Detección de code smells
+- Vulnerabilidades de seguridad
+- Medición de deuda técnica
+- Soporte de múltiples lenguajes
 
-**Metrics**:
-- Bugs
-- Vulnerabilities
+**Métricas**:
+- Errores
+- Vulnerabilidades
 - Code smells
-- Coverage
-- Duplications
+- Cobertura
+- Duplicaciones
 
 ### ESLint (JavaScript)
-**Description**: Linting tool for JavaScript
+**Descripción**: Herramienta de linting para JavaScript
 
-**Example (.eslintrc.json)**:
+**Ejemplo (.eslintrc.json)**:
 ```json
 {
   "extends": "eslint:recommended",
@@ -455,129 +455,129 @@ class WebsiteUser(HttpUser):
 ```
 
 ### Pylint (Python)
-**Description**: Python code analysis tool
+**Descripción**: Herramienta de análisis de código Python
 
-**Usage**:
+**Uso**:
 ```bash
 pylint mymodule.py
 ```
 
 ### Checkstyle (Java)
-**Description**: Code style checker for Java
+**Descripción**: Verificador de estilo de código para Java
 
-**Features**:
-- Coding standard enforcement
-- Custom rules
-- IDE integration
+**Características**:
+- Aplicación de estándares de codificación
+- Reglas personalizadas
+- Integración con IDE
 
-## Test Data Management Tools
+## Herramientas de Gestión de Datos de Prueba
 
 ### Faker
-**Description**: Library for generating fake data
+**Descripción**: Biblioteca para generar datos falsos
 
-**Example (Python)**:
+**Ejemplo (Python)**:
 ```python
 from faker import Faker
 fake = Faker()
 
-print(fake.name())  # "John Doe"
-print(fake.email()) # "john@example.com"
-print(fake.address()) # "123 Main St, City, State 12345"
+print(fake.name())  # "Juan Pérez"
+print(fake.email()) # "juan@example.com"
+print(fake.address()) # "Calle Principal 123, Ciudad, Estado 12345"
 ```
 
 ### Mockaroo
-**Description**: Online test data generator
+**Descripción**: Generador de datos de prueba en línea
 
-**Key Features**:
-- Generate realistic data
-- Multiple formats (CSV, JSON, SQL)
-- Custom schemas
-- API access
+**Características Clave**:
+- Generar datos realistas
+- Múltiples formatos (CSV, JSON, SQL)
+- Esquemas personalizados
+- Acceso API
 
 ### DBUnit (Java)
-**Description**: Database testing framework
+**Descripción**: Framework de pruebas de bases de datos
 
-**Features**:
-- Database seeding
-- State verification
-- Data-driven testing
+**Características**:
+- Siembra de bases de datos
+- Verificación de estado
+- Pruebas basadas en datos
 
-## Monitoring and Logging Tools
+## Herramientas de Monitoreo y Logging
 
 ### ELK Stack (Elasticsearch, Logstash, Kibana)
-**Description**: Log aggregation and analysis
+**Descripción**: Agregación y análisis de logs
 
-**Use Cases**:
-- Application logging
-- Performance monitoring
-- Error tracking
+**Casos de Uso**:
+- Logging de aplicaciones
+- Monitoreo de rendimiento
+- Seguimiento de errores
 
 ### Grafana
-**Description**: Metrics visualization platform
+**Descripción**: Plataforma de visualización de métricas
 
-**Features**:
-- Dashboard creation
-- Multiple data sources
-- Alerting
-- Time series analysis
+**Características**:
+- Creación de tableros
+- Múltiples fuentes de datos
+- Alertas
+- Análisis de series temporales
 
 ### Sentry
-**Description**: Error tracking and monitoring
+**Descripción**: Seguimiento y monitoreo de errores
 
-**Features**:
-- Real-time error tracking
+**Características**:
+- Seguimiento de errores en tiempo real
 - Stack traces
-- Release tracking
-- Performance monitoring
+- Seguimiento de versiones
+- Monitoreo de rendimiento
 
-## Browser Testing Tools
+## Herramientas de Pruebas de Navegadores
 
 ### BrowserStack
-**Description**: Cloud-based cross-browser testing
+**Descripción**: Pruebas multi-navegador basadas en la nube
 
-**Features**:
-- 2000+ real devices and browsers
-- Manual and automated testing
-- Local testing
-- Screenshot testing
+**Características**:
+- 2000+ dispositivos y navegadores reales
+- Pruebas manuales y automatizadas
+- Pruebas locales
+- Pruebas de capturas de pantalla
 
 ### Sauce Labs
-**Description**: Cloud testing platform
+**Descripción**: Plataforma de pruebas en la nube
 
-**Features**:
-- Cross-browser testing
-- Mobile testing
-- Visual testing
-- Performance analytics
+**Características**:
+- Pruebas multi-navegador
+- Pruebas móviles
+- Pruebas visuales
+- Análisis de rendimiento
 
 ### LambdaTest
-**Description**: Cross-browser testing platform
+**Descripción**: Plataforma de pruebas multi-navegador
 
-**Features**:
-- Live testing
-- Automated testing
-- Screenshot testing
-- Responsive testing
+**Características**:
+- Pruebas en vivo
+- Pruebas automatizadas
+- Pruebas de capturas de pantalla
+- Pruebas responsive
 
-## Version Control Integration
+## Integración con Control de Versiones
 
 ### Git Hooks
-**Description**: Scripts triggered by Git events
+**Descripción**: Scripts activados por eventos de Git
 
-**Example (pre-commit hook)**:
+**Ejemplo (hook pre-commit)**:
 ```bash
 #!/bin/sh
 npm test
 if [ $? -ne 0 ]; then
-    echo "Tests failed. Commit aborted."
+    echo "Pruebas fallaron. Commit abortado."
     exit 1
 fi
 ```
 
-### Pre-commit Framework
-**Description**: Framework for managing Git hooks
+### Framework Pre-commit
+**Descripción**: Framework para gestionar Git hooks
 
-**Example (.pre-commit-config.yaml)**:
+**Ejemplo (.pre-commit-config.yaml)**:
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -588,36 +588,36 @@ repos:
       - id: check-yaml
 ```
 
-## Choosing the Right Tools
+## Elegir las Herramientas Correctas
 
-### Factors to Consider
+### Factores a Considerar
 
-1. **Project Requirements**
-   - Type of application (web, mobile, API)
-   - Technology stack
-   - Testing needs
+1. **Requisitos del Proyecto**
+   - Tipo de aplicación (web, móvil, API)
+   - Stack tecnológico
+   - Necesidades de prueba
 
-2. **Team Skills**
-   - Programming languages known
-   - Learning curve
-   - Documentation quality
+2. **Habilidades del Equipo**
+   - Lenguajes de programación conocidos
+   - Curva de aprendizaje
+   - Calidad de documentación
 
-3. **Budget**
-   - Open-source vs. commercial
-   - Licensing costs
-   - Infrastructure costs
+3. **Presupuesto**
+   - Código abierto vs. comercial
+   - Costos de licencia
+   - Costos de infraestructura
 
-4. **Integration**
-   - CI/CD compatibility
-   - Version control integration
-   - Existing tools ecosystem
+4. **Integración**
+   - Compatibilidad CI/CD
+   - Integración con control de versiones
+   - Ecosistema de herramientas existentes
 
-5. **Scalability**
-   - Team size
-   - Project growth
-   - Performance requirements
+5. **Escalabilidad**
+   - Tamaño del equipo
+   - Crecimiento del proyecto
+   - Requisitos de rendimiento
 
-6. **Support and Community**
-   - Active development
-   - Community size
-   - Vendor support
+6. **Soporte y Comunidad**
+   - Desarrollo activo
+   - Tamaño de comunidad
+   - Soporte del proveedor

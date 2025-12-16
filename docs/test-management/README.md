@@ -1,439 +1,439 @@
-# Test Design & Management
+# Diseño y Gestión de Pruebas
 
-## Test Planning
+## Planificación de Pruebas
 
-### What is Test Planning?
-Test planning is the process of defining the scope, approach, resources, and schedule of testing activities.
+### ¿Qué es la Planificación de Pruebas?
+La planificación de pruebas es el proceso de definir el alcance, enfoque, recursos y cronograma de las actividades de prueba.
 
-### Components of a Test Plan
+### Componentes de un Plan de Pruebas
 
-#### 1. Test Objectives
-- Define what needs to be tested
-- Identify success criteria
-- Set quality goals
+#### 1. Objetivos de Prueba
+- Definir qué necesita ser probado
+- Identificar criterios de éxito
+- Establecer metas de calidad
 
-#### 2. Test Scope
-- **In Scope**: Features/functionalities to be tested
-- **Out of Scope**: Features/functionalities not to be tested
-- **Assumptions**: Conditions assumed to be true
-- **Constraints**: Limitations and restrictions
+#### 2. Alcance de Pruebas
+- **En el Alcance**: Funciones/funcionalidades a probar
+- **Fuera del Alcance**: Funciones/funcionalidades que no se probarán
+- **Suposiciones**: Condiciones asumidas como verdaderas
+- **Restricciones**: Limitaciones y restricciones
 
-#### 3. Test Strategy
-- Testing approach (manual vs. automated)
-- Types of testing to be performed
-- Entry and exit criteria
-- Suspension and resumption criteria
+#### 3. Estrategia de Prueba
+- Enfoque de prueba (manual vs. automatizado)
+- Tipos de pruebas a realizar
+- Criterios de entrada y salida
+- Criterios de suspensión y reanudación
 
-#### 4. Resource Planning
-- **Team**: Roles and responsibilities
-- **Environment**: Hardware, software, tools
-- **Tools**: Testing tools required
-- **Budget**: Cost estimation
+#### 4. Planificación de Recursos
+- **Equipo**: Roles y responsabilidades
+- **Entorno**: Hardware, software, herramientas
+- **Herramientas**: Herramientas de prueba requeridas
+- **Presupuesto**: Estimación de costos
 
-#### 5. Schedule
-- Milestones and deadlines
-- Task dependencies
-- Buffer time for contingencies
+#### 5. Cronograma
+- Hitos y fechas límite
+- Dependencias de tareas
+- Tiempo de contingencia
 
-#### 6. Risk Management
-- Identify potential risks
-- Assess risk probability and impact
-- Define mitigation strategies
+#### 6. Gestión de Riesgos
+- Identificar riesgos potenciales
+- Evaluar probabilidad e impacto de riesgos
+- Definir estrategias de mitigación
 
-### Test Plan Template Structure
+### Estructura de Plantilla de Plan de Pruebas
 
 ```markdown
-# Test Plan for [Project Name]
+# Plan de Pruebas para [Nombre del Proyecto]
 
-## 1. Introduction
-- Purpose
-- Scope
-- References
+## 1. Introducción
+- Propósito
+- Alcance
+- Referencias
 
-## 2. Test Items
-- Features to be tested
-- Features not to be tested
+## 2. Elementos de Prueba
+- Funciones a probar
+- Funciones no a probar
 
-## 3. Test Approach
-- Testing levels
-- Testing types
-- Test techniques
+## 3. Enfoque de Prueba
+- Niveles de prueba
+- Tipos de prueba
+- Técnicas de prueba
 
-## 4. Pass/Fail Criteria
-- Entry criteria
-- Exit criteria
-- Suspension criteria
+## 4. Criterios de Aprobación/Fallo
+- Criterios de entrada
+- Criterios de salida
+- Criterios de suspensión
 
-## 5. Test Deliverables
-- Test plan document
-- Test cases
-- Test reports
+## 5. Entregables de Prueba
+- Documento de plan de pruebas
+- Casos de prueba
+- Informes de prueba
 
-## 6. Test Environment
-- Hardware requirements
-- Software requirements
-- Network configuration
+## 6. Entorno de Prueba
+- Requisitos de hardware
+- Requisitos de software
+- Configuración de red
 
-## 7. Schedule
-- Test phases and milestones
+## 7. Cronograma
+- Fases y hitos de prueba
 
-## 8. Staffing and Training
-- Roles and responsibilities
-- Training requirements
+## 8. Personal y Capacitación
+- Roles y responsabilidades
+- Requisitos de capacitación
 
-## 9. Risks and Contingencies
-- Identified risks
-- Mitigation plans
+## 9. Riesgos y Contingencias
+- Riesgos identificados
+- Planes de mitigación
 
-## 10. Approvals
-- Sign-off requirements
+## 10. Aprobaciones
+- Requisitos de firma
 ```
 
-## Test Case Design
+## Diseño de Casos de Prueba
 
-### What is a Test Case?
-A test case is a set of conditions or variables under which a tester will determine whether a system under test satisfies requirements.
+### ¿Qué es un Caso de Prueba?
+Un caso de prueba es un conjunto de condiciones o variables bajo las cuales un probador determinará si un sistema bajo prueba satisface los requisitos.
 
-### Components of a Test Case
+### Componentes de un Caso de Prueba
 
-1. **Test Case ID**: Unique identifier
-2. **Test Case Title**: Brief description
-3. **Description**: Detailed test case description
-4. **Preconditions**: Prerequisites before execution
-5. **Test Steps**: Step-by-step instructions
-6. **Test Data**: Input data required
-7. **Expected Result**: Expected outcome
-8. **Actual Result**: Observed outcome (filled during execution)
-9. **Status**: Pass/Fail/Blocked/Skip
-10. **Priority**: High/Medium/Low
-11. **Severity**: Critical/Major/Minor/Trivial
+1. **ID de Caso de Prueba**: Identificador único
+2. **Título de Caso de Prueba**: Descripción breve
+3. **Descripción**: Descripción detallada del caso de prueba
+4. **Precondiciones**: Requisitos previos antes de la ejecución
+5. **Pasos de Prueba**: Instrucciones paso a paso
+6. **Datos de Prueba**: Datos de entrada requeridos
+7. **Resultado Esperado**: Resultado esperado
+8. **Resultado Real**: Resultado observado (completado durante la ejecución)
+9. **Estado**: Aprobado/Fallido/Bloqueado/Omitido
+10. **Prioridad**: Alta/Media/Baja
+11. **Severidad**: Crítica/Mayor/Menor/Trivial
 
-### Test Case Example
-
-```
-Test Case ID: TC_001
-Title: Verify user login with valid credentials
-Description: Test the login functionality with valid username and password
-Preconditions: 
-  - User account exists in the system
-  - User is on the login page
-
-Test Steps:
-1. Enter valid username
-2. Enter valid password
-3. Click "Login" button
-
-Test Data:
-  Username: testuser@example.com
-  Password: ValidPass123!
-
-Expected Result:
-  - User is successfully logged in
-  - User is redirected to dashboard
-  - Welcome message is displayed
-
-Priority: High
-Severity: Critical
-```
-
-### Test Case Design Techniques
-
-#### 1. Equivalence Partitioning
-- Divide input data into equivalent partitions
-- Test one value from each partition
-- Example: Age field (0-17, 18-65, 66+)
-
-#### 2. Boundary Value Analysis
-- Test at boundaries of input domains
-- Example: For range 1-100, test 0, 1, 100, 101
-
-#### 3. Decision Table Testing
-- Systematic approach for complex business logic
-- Combinations of inputs and corresponding outputs
+### Ejemplo de Caso de Prueba
 
 ```
-| Condition 1 | Condition 2 | Action 1 | Action 2 |
+ID de Caso de Prueba: TC_001
+Título: Verificar inicio de sesión de usuario con credenciales válidas
+Descripción: Probar la funcionalidad de inicio de sesión con nombre de usuario y contraseña válidos
+Precondiciones: 
+  - La cuenta de usuario existe en el sistema
+  - El usuario está en la página de inicio de sesión
+
+Pasos de Prueba:
+1. Ingresar nombre de usuario válido
+2. Ingresar contraseña válida
+3. Hacer clic en el botón "Iniciar sesión"
+
+Datos de Prueba:
+  Nombre de usuario: testuser@example.com
+  Contraseña: ValidPass123!
+
+Resultado Esperado:
+  - El usuario inicia sesión exitosamente
+  - El usuario es redirigido al tablero
+  - Se muestra mensaje de bienvenida
+
+Prioridad: Alta
+Severidad: Crítica
+```
+
+### Técnicas de Diseño de Casos de Prueba
+
+#### 1. Partición de Equivalencia
+- Dividir datos de entrada en particiones equivalentes
+- Probar un valor de cada partición
+- Ejemplo: Campo de edad (0-17, 18-65, 66+)
+
+#### 2. Análisis de Valores Límite
+- Probar en los límites de dominios de entrada
+- Ejemplo: Para rango 1-100, probar 0, 1, 100, 101
+
+#### 3. Pruebas de Tabla de Decisión
+- Enfoque sistemático para lógica de negocio compleja
+- Combinaciones de entradas y salidas correspondientes
+
+```
+| Condición 1 | Condición 2 | Acción 1 | Acción 2 |
 |------------|-------------|----------|----------|
-| True       | True        | Execute  | Skip     |
-| True       | False       | Skip     | Execute  |
-| False      | True        | Skip     | Execute  |
-| False      | False       | Skip     | Skip     |
+| Verdadero  | Verdadero   | Ejecutar | Omitir   |
+| Verdadero  | Falso       | Omitir   | Ejecutar |
+| Falso      | Verdadero   | Omitir   | Ejecutar |
+| Falso      | Falso       | Omitir   | Omitir   |
 ```
 
-#### 4. State Transition Testing
-- Test system behavior with different states
-- Example: Order states (Pending → Processing → Shipped → Delivered)
+#### 4. Pruebas de Transición de Estado
+- Probar comportamiento del sistema con diferentes estados
+- Ejemplo: Estados de pedido (Pendiente → Procesando → Enviado → Entregado)
 
-#### 5. Use Case Testing
-- Derive test cases from use cases
-- Focus on user scenarios
+#### 5. Pruebas de Caso de Uso
+- Derivar casos de prueba de casos de uso
+- Enfoque en escenarios de usuario
 
-#### 6. Error Guessing
-- Experience-based technique
-- Predict where errors might occur
+#### 6. Adivinación de Errores
+- Técnica basada en experiencia
+- Predecir dónde podrían ocurrir errores
 
-## Test Data Management
+## Gestión de Datos de Prueba
 
-### What is Test Data?
-Test data is the data that is used to execute tests, which can include input values, expected results, and setup data.
+### ¿Qué son los Datos de Prueba?
+Los datos de prueba son los datos que se utilizan para ejecutar pruebas, que pueden incluir valores de entrada, resultados esperados y datos de configuración.
 
-### Types of Test Data
+### Tipos de Datos de Prueba
 
-#### 1. Valid Test Data
-- Data that should be accepted by the system
-- Tests positive scenarios
+#### 1. Datos de Prueba Válidos
+- Datos que deben ser aceptados por el sistema
+- Prueba escenarios positivos
 
-#### 2. Invalid Test Data
-- Data that should be rejected by the system
-- Tests negative scenarios
+#### 2. Datos de Prueba Inválidos
+- Datos que deben ser rechazados por el sistema
+- Prueba escenarios negativos
 
-#### 3. Boundary Test Data
-- Data at the edges of valid/invalid ranges
+#### 3. Datos de Prueba de Límite
+- Datos en los bordes de rangos válidos/inválidos
 
-#### 4. Default Test Data
-- Pre-configured or system-generated data
+#### 4. Datos de Prueba Predeterminados
+- Datos preconfigurados o generados por el sistema
 
-### Test Data Management Best Practices
+### Mejores Prácticas de Gestión de Datos de Prueba
 
-1. **Data Security**
-   - Mask sensitive data
-   - Comply with data protection regulations
-   - Use synthetic data when possible
+1. **Seguridad de Datos**
+   - Enmascarar datos sensibles
+   - Cumplir con regulaciones de protección de datos
+   - Usar datos sintéticos cuando sea posible
 
-2. **Data Quality**
-   - Ensure data accuracy
-   - Keep data up-to-date
-   - Validate data integrity
+2. **Calidad de Datos**
+   - Asegurar precisión de datos
+   - Mantener datos actualizados
+   - Validar integridad de datos
 
-3. **Data Reusability**
-   - Create reusable datasets
-   - Document data requirements
-   - Version control test data
+3. **Reutilización de Datos**
+   - Crear conjuntos de datos reutilizables
+   - Documentar requisitos de datos
+   - Control de versiones de datos de prueba
 
-4. **Data Maintenance**
-   - Regular cleanup
-   - Archive old data
-   - Refresh test databases
+4. **Mantenimiento de Datos**
+   - Limpieza regular
+   - Archivar datos antiguos
+   - Actualizar bases de datos de prueba
 
-### Test Data Generation Techniques
+### Técnicas de Generación de Datos de Prueba
 
-- **Manual Creation**: Create data manually
-- **Data Masking**: Anonymize production data
-- **Data Subsetting**: Extract subset of production data
-- **Synthetic Data**: Generate artificial data
-- **Data Seeding**: Populate database with predefined data
+- **Creación Manual**: Crear datos manualmente
+- **Enmascaramiento de Datos**: Anonimizar datos de producción
+- **Subconjunto de Datos**: Extraer subconjunto de datos de producción
+- **Datos Sintéticos**: Generar datos artificiales
+- **Siembra de Datos**: Poblar base de datos con datos predefinidos
 
-## Bug Tracking and Reporting
+## Seguimiento y Reporte de Errores
 
-### What is a Bug/Defect?
-A bug is a flaw in the software that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.
+### ¿Qué es un Error/Defecto?
+Un error es una falla en el software que hace que produzca un resultado incorrecto o inesperado, o que se comporte de formas no deseadas.
 
-### Bug Life Cycle
+### Ciclo de Vida de un Error
 
 ```
-New → Assigned → Open → Fixed → Retest → Verified → Closed
+Nuevo → Asignado → Abierto → Corregido → Re-probar → Verificado → Cerrado
                     ↓
-                Rejected / Deferred / Duplicate
+                Rechazado / Diferido / Duplicado
 ```
 
-### Bug Report Components
+### Componentes de un Reporte de Error
 
-1. **Bug ID**: Unique identifier
-2. **Summary**: Brief description
-3. **Description**: Detailed explanation
-4. **Steps to Reproduce**: How to recreate the bug
-5. **Expected Result**: What should happen
-6. **Actual Result**: What actually happens
-7. **Severity**: Impact on system
-8. **Priority**: Urgency of fix
-9. **Environment**: OS, browser, version
-10. **Attachments**: Screenshots, logs, videos
+1. **ID de Error**: Identificador único
+2. **Resumen**: Descripción breve
+3. **Descripción**: Explicación detallada
+4. **Pasos para Reproducir**: Cómo recrear el error
+5. **Resultado Esperado**: Qué debería suceder
+6. **Resultado Real**: Qué sucede realmente
+7. **Severidad**: Impacto en el sistema
+8. **Prioridad**: Urgencia de corrección
+9. **Entorno**: SO, navegador, versión
+10. **Adjuntos**: Capturas de pantalla, registros, videos
 
-### Bug Report Example
-
-```
-Bug ID: BUG-001
-Summary: Login button not responding on mobile devices
-
-Description:
-The login button on the authentication page does not respond 
-to tap events on mobile devices using iOS Safari browser.
-
-Steps to Reproduce:
-1. Open the application on iPhone using Safari
-2. Navigate to login page
-3. Enter valid credentials
-4. Tap the "Login" button
-
-Expected Result:
-User should be logged in and redirected to dashboard
-
-Actual Result:
-Nothing happens when tapping the login button
-
-Environment:
-- Device: iPhone 12 Pro
-- OS: iOS 15.5
-- Browser: Safari
-- App Version: 2.3.1
-
-Severity: Critical
-Priority: High
-
-Attachments:
-- screenshot_login_page.png
-- video_reproduction.mp4
-```
-
-### Severity vs Priority
-
-#### Severity (Impact on System)
-- **Critical**: System crash, data loss
-- **Major**: Major functionality failure
-- **Minor**: Minor functionality issue
-- **Trivial**: Cosmetic issues
-
-#### Priority (Urgency of Fix)
-- **High**: Fix immediately
-- **Medium**: Fix in next release
-- **Low**: Fix when time permits
-
-### Bug Tracking Tools
-- **Jira**: Popular project management tool
-- **Bugzilla**: Open-source bug tracker
-- **Azure DevOps**: Microsoft's DevOps platform
-- **GitHub Issues**: Integrated with GitHub
-- **Trello**: Visual project management
-- **Monday.com**: Work management platform
-
-## Test Metrics and Reporting
-
-### Key Test Metrics
-
-#### 1. Test Coverage Metrics
-```
-Test Coverage = (Number of Requirements Tested / Total Requirements) × 100%
-Code Coverage = (Lines of Code Executed / Total Lines of Code) × 100%
-```
-
-#### 2. Defect Metrics
-```
-Defect Density = Total Defects / Size of Software (KLOC)
-  (KLOC = Kilo Lines of Code, i.e., thousands of lines of code)
-Defect Detection Percentage = (Defects Found in Testing / Total Defects) × 100%
-Defect Removal Efficiency = (Defects Found Before Release / Total Defects) × 100%
-```
-
-#### 3. Test Execution Metrics
-```
-Test Execution Rate = (Tests Executed / Total Tests) × 100%
-Pass Percentage = (Passed Tests / Total Tests) × 100%
-Fail Percentage = (Failed Tests / Total Tests) × 100%
-```
-
-#### 4. Test Progress Metrics
-- Test cases written vs. planned
-- Test cases executed vs. planned
-- Defects found vs. expected
-- Defects fixed vs. reported
-
-### Test Reporting
-
-#### Daily Test Status Report
-- Tests executed
-- Tests passed/failed
-- New defects found
-- Blockers and issues
-
-#### Weekly Test Summary Report
-- Test progress overview
-- Key achievements
-- Risks and issues
-- Plans for next week
-
-#### Test Closure Report
-- Test summary and results
-- Defect summary
-- Lessons learned
-- Recommendations
-
-### Sample Test Metrics Dashboard
+### Ejemplo de Reporte de Error
 
 ```
-Total Test Cases: 500
-Executed: 450 (90%)
-Passed: 400 (89%)
-Failed: 40 (9%)
-Blocked: 10 (2%)
+ID de Error: BUG-001
+Resumen: Botón de inicio de sesión no responde en dispositivos móviles
 
-Defects Found: 85
-Critical: 5
-Major: 20
-Minor: 45
-Trivial: 15
+Descripción:
+El botón de inicio de sesión en la página de autenticación no responde 
+a eventos táctiles en dispositivos móviles usando el navegador Safari de iOS.
 
-Test Coverage: 92%
-Code Coverage: 78%
-Defect Density: 1.2 defects/KLOC
+Pasos para Reproducir:
+1. Abrir la aplicación en iPhone usando Safari
+2. Navegar a página de inicio de sesión
+3. Ingresar credenciales válidas
+4. Tocar el botón "Iniciar sesión"
+
+Resultado Esperado:
+El usuario debería iniciar sesión y ser redirigido al tablero
+
+Resultado Real:
+No sucede nada al tocar el botón de inicio de sesión
+
+Entorno:
+- Dispositivo: iPhone 12 Pro
+- SO: iOS 15.5
+- Navegador: Safari
+- Versión de App: 2.3.1
+
+Severidad: Crítica
+Prioridad: Alta
+
+Adjuntos:
+- captura_pantalla_inicio_sesion.png
+- video_reproduccion.mp4
 ```
 
-## Test Management Tools
+### Severidad vs Prioridad
 
-### Popular Test Management Tools
+#### Severidad (Impacto en el Sistema)
+- **Crítica**: Caída del sistema, pérdida de datos
+- **Mayor**: Fallo de funcionalidad mayor
+- **Menor**: Problema de funcionalidad menor
+- **Trivial**: Problemas cosméticos
+
+#### Prioridad (Urgencia de Corrección)
+- **Alta**: Corregir inmediatamente
+- **Media**: Corregir en próxima versión
+- **Baja**: Corregir cuando haya tiempo
+
+### Herramientas de Seguimiento de Errores
+- **Jira**: Herramienta popular de gestión de proyectos
+- **Bugzilla**: Rastreador de errores de código abierto
+- **Azure DevOps**: Plataforma DevOps de Microsoft
+- **GitHub Issues**: Integrado con GitHub
+- **Trello**: Gestión visual de proyectos
+- **Monday.com**: Plataforma de gestión de trabajo
+
+## Métricas e Informes de Prueba
+
+### Métricas Clave de Prueba
+
+#### 1. Métricas de Cobertura de Pruebas
+```
+Cobertura de Pruebas = (Número de Requisitos Probados / Requisitos Totales) × 100%
+Cobertura de Código = (Líneas de Código Ejecutadas / Líneas Totales de Código) × 100%
+```
+
+#### 2. Métricas de Defectos
+```
+Densidad de Defectos = Defectos Totales / Tamaño del Software (KLOC)
+  (KLOC = Kilo Líneas de Código, es decir, miles de líneas de código)
+Porcentaje de Detección de Defectos = (Defectos Encontrados en Pruebas / Defectos Totales) × 100%
+Eficiencia de Eliminación de Defectos = (Defectos Encontrados Antes del Lanzamiento / Defectos Totales) × 100%
+```
+
+#### 3. Métricas de Ejecución de Pruebas
+```
+Tasa de Ejecución de Pruebas = (Pruebas Ejecutadas / Pruebas Totales) × 100%
+Porcentaje de Aprobación = (Pruebas Aprobadas / Pruebas Totales) × 100%
+Porcentaje de Fallo = (Pruebas Fallidas / Pruebas Totales) × 100%
+```
+
+#### 4. Métricas de Progreso de Pruebas
+- Casos de prueba escritos vs. planificados
+- Casos de prueba ejecutados vs. planificados
+- Defectos encontrados vs. esperados
+- Defectos corregidos vs. reportados
+
+### Informes de Prueba
+
+#### Informe de Estado Diario de Pruebas
+- Pruebas ejecutadas
+- Pruebas aprobadas/fallidas
+- Nuevos defectos encontrados
+- Bloqueadores y problemas
+
+#### Informe Resumen Semanal de Pruebas
+- Resumen de progreso de pruebas
+- Logros clave
+- Riesgos y problemas
+- Planes para próxima semana
+
+#### Informe de Cierre de Pruebas
+- Resumen de pruebas y resultados
+- Resumen de defectos
+- Lecciones aprendidas
+- Recomendaciones
+
+### Panel de Métricas de Prueba de Ejemplo
+
+```
+Casos de Prueba Totales: 500
+Ejecutados: 450 (90%)
+Aprobados: 400 (89%)
+Fallidos: 40 (9%)
+Bloqueados: 10 (2%)
+
+Defectos Encontrados: 85
+Críticos: 5
+Mayores: 20
+Menores: 45
+Triviales: 15
+
+Cobertura de Pruebas: 92%
+Cobertura de Código: 78%
+Densidad de Defectos: 1.2 defectos/KLOC
+```
+
+## Herramientas de Gestión de Pruebas
+
+### Herramientas Populares de Gestión de Pruebas
 
 #### 1. TestRail
-- Comprehensive test case management
-- Test run tracking
-- Reporting and analytics
+- Gestión completa de casos de prueba
+- Seguimiento de ejecución de pruebas
+- Informes y análisis
 
 #### 2. Zephyr
-- Integrates with Jira
-- Real-time testing metrics
-- Traceability
+- Se integra con Jira
+- Métricas de prueba en tiempo real
+- Trazabilidad
 
 #### 3. qTest
-- Enterprise test management
-- Agile testing support
-- CI/CD integration
+- Gestión de pruebas empresarial
+- Soporte para pruebas ágiles
+- Integración CI/CD
 
 #### 4. PractiTest
-- End-to-end test management
-- Flexible reporting
-- Integration capabilities
+- Gestión de pruebas de extremo a extremo
+- Informes flexibles
+- Capacidades de integración
 
 #### 5. TestLink
-- Open-source test management
-- Requirements management
-- Test execution tracking
+- Gestión de pruebas de código abierto
+- Gestión de requisitos
+- Seguimiento de ejecución de pruebas
 
-## Best Practices in Test Management
+## Mejores Prácticas en Gestión de Pruebas
 
-1. **Early Planning**
-   - Start test planning early in the project
-   - Involve stakeholders in planning
+1. **Planificación Temprana**
+   - Comenzar planificación de pruebas temprano en el proyecto
+   - Involucrar a las partes interesadas en la planificación
 
-2. **Clear Documentation**
-   - Maintain up-to-date test documentation
-   - Use templates for consistency
+2. **Documentación Clara**
+   - Mantener documentación de pruebas actualizada
+   - Usar plantillas para consistencia
 
-3. **Traceability**
-   - Link test cases to requirements
-   - Track defects to test cases
+3. **Trazabilidad**
+   - Vincular casos de prueba a requisitos
+   - Rastrear defectos a casos de prueba
 
-4. **Regular Reviews**
-   - Review test plans and cases regularly
-   - Update based on changes
+4. **Revisiones Regulares**
+   - Revisar planes y casos de prueba regularmente
+   - Actualizar según cambios
 
-5. **Automation Strategy**
-   - Identify candidates for automation
-   - Balance manual and automated testing
+5. **Estrategia de Automatización**
+   - Identificar candidatos para automatización
+   - Equilibrar pruebas manuales y automatizadas
 
-6. **Communication**
-   - Regular status updates
-   - Transparent reporting
-   - Stakeholder engagement
+6. **Comunicación**
+   - Actualizaciones de estado regulares
+   - Informes transparentes
+   - Compromiso de partes interesadas
 
-7. **Continuous Improvement**
-   - Analyze metrics and trends
-   - Learn from defects
-   - Refine processes based on lessons learned
+7. **Mejora Continua**
+   - Analizar métricas y tendencias
+   - Aprender de defectos
+   - Refinar procesos basándose en lecciones aprendidas

@@ -1,71 +1,71 @@
-# Testing Types
+# Tipos de Pruebas
 
-## Manual Testing
+## Pruebas Manuales
 
-### What is Manual Testing?
-Manual testing is the process of manually checking software for defects. It requires a tester to play the role of an end user and use most features of the application to ensure correct behavior.
+### ¿Qué son las Pruebas Manuales?
+Las pruebas manuales son el proceso de verificar manualmente el software en busca de defectos. Requiere que un probador asuma el rol de un usuario final y utilice la mayoría de las funciones de la aplicación para garantizar el comportamiento correcto.
 
-### Types of Manual Testing
+### Tipos de Pruebas Manuales
 
-#### 1. Exploratory Testing
-- **Definition**: Simultaneous learning, test design, and execution
-- **When to use**: New features, complex scenarios
-- **Benefits**: Finds unexpected defects, creative approach
-- **Techniques**: Session-based testing, freestyle exploration
+#### 1. Pruebas Exploratorias
+- **Definición**: Aprendizaje, diseño y ejecución de pruebas simultáneos
+- **Cuándo usar**: Nuevas funciones, escenarios complejos
+- **Beneficios**: Encuentra defectos inesperados, enfoque creativo
+- **Técnicas**: Pruebas basadas en sesiones, exploración libre
 
-#### 2. Ad-hoc Testing
-- **Definition**: Informal testing without planning
-- **When to use**: Quick checks, time constraints
-- **Benefits**: Fast, requires minimal preparation
-- **Limitations**: Not repeatable, no documentation
+#### 2. Pruebas Ad-hoc
+- **Definición**: Pruebas informales sin planificación
+- **Cuándo usar**: Verificaciones rápidas, restricciones de tiempo
+- **Beneficios**: Rápido, requiere preparación mínima
+- **Limitaciones**: No repetible, sin documentación
 
-#### 3. Smoke Testing
-- **Definition**: Basic functionality verification
-- **When to use**: After new builds, before detailed testing
-- **Benefits**: Quick validation of critical features
-- **Example**: Can users log in? Can they access main features?
+#### 3. Pruebas de Humo
+- **Definición**: Verificación básica de funcionalidad
+- **Cuándo usar**: Después de nuevas compilaciones, antes de pruebas detalladas
+- **Beneficios**: Validación rápida de funciones críticas
+- **Ejemplo**: ¿Pueden los usuarios iniciar sesión? ¿Pueden acceder a las funciones principales?
 
-#### 4. Sanity Testing
-- **Definition**: Focused testing on specific functionality
-- **When to use**: After bug fixes, minor changes
-- **Benefits**: Quickly verify specific areas
-- **Example**: Testing only the payment module after a fix
+#### 4. Pruebas de Sanidad
+- **Definición**: Pruebas enfocadas en funcionalidad específica
+- **Cuándo usar**: Después de correcciones de errores, cambios menores
+- **Beneficios**: Verificar rápidamente áreas específicas
+- **Ejemplo**: Probar solo el módulo de pagos después de una corrección
 
-## Automated Testing
+## Pruebas Automatizadas
 
-### What is Automated Testing?
-Automated testing uses software tools to execute pre-scripted tests on a software application before it is released into production.
+### ¿Qué son las Pruebas Automatizadas?
+Las pruebas automatizadas utilizan herramientas de software para ejecutar pruebas pre-escritas en una aplicación antes de que se lance a producción.
 
-### Benefits of Automation
-- **Speed**: Tests run faster than manual execution
-- **Repeatability**: Consistent test execution
-- **Coverage**: More tests can be executed
-- **Early Detection**: Integration with CI/CD
-- **Cost-Effective**: Long-term savings on repetitive tests
+### Beneficios de la Automatización
+- **Velocidad**: Las pruebas se ejecutan más rápido que la ejecución manual
+- **Repetibilidad**: Ejecución de pruebas consistente
+- **Cobertura**: Se pueden ejecutar más pruebas
+- **Detección Temprana**: Integración con CI/CD
+- **Rentable**: Ahorro a largo plazo en pruebas repetitivas
 
-### Types of Automated Tests
+### Tipos de Pruebas Automatizadas
 
-#### 1. Unit Tests
+#### 1. Pruebas Unitarias
 ```python
-# Example: Testing a simple function
+# Ejemplo: Probar una función simple
 def test_add_numbers():
     assert add(2, 3) == 5
     assert add(-1, 1) == 0
     assert add(0, 0) == 0
 ```
 
-#### 2. Integration Tests
+#### 2. Pruebas de Integración
 ```python
-# Example: Testing database integration
+# Ejemplo: Probar integración con base de datos
 def test_user_creation():
     user = create_user("test@example.com")
     saved_user = database.get_user(user.id)
     assert saved_user.email == "test@example.com"
 ```
 
-#### 3. End-to-End Tests
+#### 3. Pruebas de Extremo a Extremo
 ```python
-# Example: Testing complete user flow
+# Ejemplo: Probar flujo completo del usuario
 def test_checkout_process():
     login("user@example.com", "password")
     add_item_to_cart("product-123")
@@ -74,169 +74,169 @@ def test_checkout_process():
     assert order_confirmation_displayed()
 ```
 
-### Automation Testing Tools
-- **Selenium**: Web application testing
-- **Cypress**: Modern web testing
-- **Playwright**: Cross-browser automation
-- **JUnit/TestNG**: Java testing frameworks
-- **PyTest**: Python testing framework
-- **Jest**: JavaScript testing
+### Herramientas de Automatización de Pruebas
+- **Selenium**: Pruebas de aplicaciones web
+- **Cypress**: Pruebas web modernas
+- **Playwright**: Automatización multi-navegador
+- **JUnit/TestNG**: Frameworks de pruebas Java
+- **PyTest**: Framework de pruebas Python
+- **Jest**: Pruebas JavaScript
 
-## Performance Testing
+## Pruebas de Rendimiento
 
-### What is Performance Testing?
-Performance testing determines how a system performs in terms of responsiveness and stability under a particular workload.
+### ¿Qué son las Pruebas de Rendimiento?
+Las pruebas de rendimiento determinan cómo se desempeña un sistema en términos de capacidad de respuesta y estabilidad bajo una carga de trabajo particular.
 
-### Types of Performance Testing
+### Tipos de Pruebas de Rendimiento
 
-#### 1. Load Testing
-- **Purpose**: Validate performance under expected load
-- **Example**: Testing with 1000 concurrent users
-- **Metrics**: Response time, throughput, resource utilization
+#### 1. Pruebas de Carga
+- **Propósito**: Validar rendimiento bajo carga esperada
+- **Ejemplo**: Probar con 1000 usuarios concurrentes
+- **Métricas**: Tiempo de respuesta, rendimiento, utilización de recursos
 
-#### 2. Stress Testing
-- **Purpose**: Determine breaking point of the system
-- **Example**: Gradually increase users until system fails
-- **Metrics**: Maximum load, recovery time
+#### 2. Pruebas de Estrés
+- **Propósito**: Determinar el punto de ruptura del sistema
+- **Ejemplo**: Aumentar gradualmente usuarios hasta que el sistema falle
+- **Métricas**: Carga máxima, tiempo de recuperación
 
-#### 3. Spike Testing
-- **Purpose**: Test sudden increase in load
-- **Example**: Black Friday sale traffic
-- **Metrics**: System stability, error rate
+#### 3. Pruebas de Picos
+- **Propósito**: Probar aumento repentino en la carga
+- **Ejemplo**: Tráfico de venta de Black Friday
+- **Métricas**: Estabilidad del sistema, tasa de errores
 
-#### 4. Endurance Testing
-- **Purpose**: Test system over extended period
-- **Example**: Run at normal load for 24-48 hours
-- **Metrics**: Memory leaks, resource degradation
+#### 4. Pruebas de Resistencia
+- **Propósito**: Probar sistema durante período extendido
+- **Ejemplo**: Ejecutar a carga normal durante 24-48 horas
+- **Métricas**: Fugas de memoria, degradación de recursos
 
-#### 5. Scalability Testing
-- **Purpose**: Determine system's ability to scale
-- **Example**: Add more servers and measure improvement
-- **Metrics**: Linear scalability, resource efficiency
+#### 5. Pruebas de Escalabilidad
+- **Propósito**: Determinar capacidad de escalamiento del sistema
+- **Ejemplo**: Agregar más servidores y medir mejora
+- **Métricas**: Escalabilidad lineal, eficiencia de recursos
 
-### Performance Testing Tools
-- **JMeter**: Open-source load testing
-- **Gatling**: High-performance load testing
-- **K6**: Modern load testing
-- **LoadRunner**: Enterprise performance testing
-- **Locust**: Python-based load testing
+### Herramientas de Pruebas de Rendimiento
+- **JMeter**: Pruebas de carga de código abierto
+- **Gatling**: Pruebas de carga de alto rendimiento
+- **K6**: Pruebas de carga modernas
+- **LoadRunner**: Pruebas de rendimiento empresarial
+- **Locust**: Pruebas de carga basadas en Python
 
-## Security Testing
+## Pruebas de Seguridad
 
-### What is Security Testing?
-Security testing identifies vulnerabilities and ensures that data and resources are protected from potential intruders.
+### ¿Qué son las Pruebas de Seguridad?
+Las pruebas de seguridad identifican vulnerabilidades y aseguran que los datos y recursos estén protegidos de posibles intrusos.
 
-### Common Security Tests
+### Pruebas de Seguridad Comunes
 
-#### 1. Vulnerability Scanning
-- Automated tools scan for known vulnerabilities
-- Tools: Nessus, OpenVAS, Qualys
+#### 1. Escaneo de Vulnerabilidades
+- Herramientas automatizadas escanean vulnerabilidades conocidas
+- Herramientas: Nessus, OpenVAS, Qualys
 
-#### 2. Penetration Testing
-- Simulated attacks on the system
-- Manual and automated approaches
-- Tools: Metasploit, Burp Suite, OWASP ZAP
+#### 2. Pruebas de Penetración
+- Ataques simulados en el sistema
+- Enfoques manuales y automatizados
+- Herramientas: Metasploit, Burp Suite, OWASP ZAP
 
-#### 3. Security Auditing
-- Inspection of security policies and procedures
-- Code reviews for security issues
+#### 3. Auditoría de Seguridad
+- Inspección de políticas y procedimientos de seguridad
+- Revisión de código para problemas de seguridad
 
-#### 4. Security Scanning
-- Static analysis of code
-- Tools: SonarQube, Checkmarx, Veracode
+#### 4. Escaneo de Seguridad
+- Análisis estático de código
+- Herramientas: SonarQube, Checkmarx, Veracode
 
-### Common Security Vulnerabilities (OWASP Top 10)
+### Vulnerabilidades de Seguridad Comunes (OWASP Top 10)
 
-1. **Injection**: SQL, NoSQL, OS command injection
-2. **Broken Authentication**: Session management issues
-3. **Sensitive Data Exposure**: Unencrypted data
-4. **XML External Entities (XXE)**: XML processor vulnerabilities
-5. **Broken Access Control**: Unauthorized access
-6. **Security Misconfiguration**: Default settings, errors
-7. **Cross-Site Scripting (XSS)**: Malicious scripts
-8. **Insecure Deserialization**: Object manipulation
-9. **Using Components with Known Vulnerabilities**: Outdated libraries
-10. **Insufficient Logging & Monitoring**: Lack of detection
+1. **Inyección**: SQL, NoSQL, inyección de comandos del SO
+2. **Autenticación Rota**: Problemas de gestión de sesiones
+3. **Exposición de Datos Sensibles**: Datos sin cifrar
+4. **Entidades Externas XML (XXE)**: Vulnerabilidades del procesador XML
+5. **Control de Acceso Roto**: Acceso no autorizado
+6. **Configuración Incorrecta de Seguridad**: Configuración predeterminada, errores
+7. **Cross-Site Scripting (XSS)**: Scripts maliciosos
+8. **Deserialización Insegura**: Manipulación de objetos
+9. **Uso de Componentes con Vulnerabilidades Conocidas**: Bibliotecas desactualizadas
+10. **Registro y Monitoreo Insuficientes**: Falta de detección
 
-## Usability Testing
+## Pruebas de Usabilidad
 
-### What is Usability Testing?
-Usability testing evaluates how easy and user-friendly the software is.
+### ¿Qué son las Pruebas de Usabilidad?
+Las pruebas de usabilidad evalúan qué tan fácil y amigable es el software.
 
-### Key Aspects
-- **Learnability**: How easy for new users to learn
-- **Efficiency**: How quickly users can perform tasks
-- **Memorability**: How easily users remember the interface
-- **Errors**: How many errors users make and recovery
-- **Satisfaction**: How pleasant the experience is
+### Aspectos Clave
+- **Aprendizaje**: Qué tan fácil es para nuevos usuarios aprender
+- **Eficiencia**: Qué tan rápido los usuarios pueden realizar tareas
+- **Memorabilidad**: Qué tan fácilmente los usuarios recuerdan la interfaz
+- **Errores**: Cuántos errores cometen los usuarios y recuperación
+- **Satisfacción**: Qué tan placentera es la experiencia
 
-### Usability Testing Methods
-- **Moderated Testing**: Facilitator guides users
-- **Unmoderated Testing**: Users test independently
-- **A/B Testing**: Compare two versions
-- **Eye Tracking**: Track where users look
-- **Think Aloud Protocol**: Users verbalize thoughts
+### Métodos de Pruebas de Usabilidad
+- **Pruebas Moderadas**: Facilitador guía a los usuarios
+- **Pruebas No Moderadas**: Los usuarios prueban independientemente
+- **Pruebas A/B**: Comparar dos versiones
+- **Seguimiento Ocular**: Rastrear dónde miran los usuarios
+- **Protocolo de Pensamiento en Voz Alta**: Los usuarios verbalizan pensamientos
 
-## Regression Testing
+## Pruebas de Regresión
 
-### What is Regression Testing?
-Regression testing ensures that recent changes haven't adversely affected existing functionality.
+### ¿Qué son las Pruebas de Regresión?
+Las pruebas de regresión aseguran que los cambios recientes no hayan afectado adversamente la funcionalidad existente.
 
-### When to Perform Regression Testing
-- After bug fixes
-- After new feature additions
-- After code refactoring
-- After configuration changes
+### Cuándo Realizar Pruebas de Regresión
+- Después de correcciones de errores
+- Después de agregar nuevas funciones
+- Después de refactorización de código
+- Después de cambios de configuración
 
-### Types of Regression Testing
+### Tipos de Pruebas de Regresión
 
-#### 1. Complete Regression
-- Execute all test cases
-- Time-consuming but thorough
+#### 1. Regresión Completa
+- Ejecutar todos los casos de prueba
+- Consume tiempo pero exhaustivo
 
-#### 2. Partial Regression
-- Test affected areas only
-- Faster, risk-based approach
+#### 2. Regresión Parcial
+- Probar solo áreas afectadas
+- Enfoque más rápido basado en riesgos
 
-#### 3. Unit Regression
-- Test specific units/components
-- Used after code changes
+#### 3. Regresión Unitaria
+- Probar unidades/componentes específicos
+- Usado después de cambios de código
 
-### Regression Testing Strategies
-- **Retest All**: Run all existing tests
-- **Regression Test Selection**: Run subset of tests
-- **Prioritization**: Run most important tests first
-- **Hybrid Approach**: Combine multiple strategies
+### Estrategias de Pruebas de Regresión
+- **Re-probar Todo**: Ejecutar todas las pruebas existentes
+- **Selección de Pruebas de Regresión**: Ejecutar subconjunto de pruebas
+- **Priorización**: Ejecutar las pruebas más importantes primero
+- **Enfoque Híbrido**: Combinar múltiples estrategias
 
-## Compatibility Testing
+## Pruebas de Compatibilidad
 
-### What is Compatibility Testing?
-Compatibility testing checks if the software works across different environments.
+### ¿Qué son las Pruebas de Compatibilidad?
+Las pruebas de compatibilidad verifican si el software funciona en diferentes entornos.
 
-### Types of Compatibility Testing
+### Tipos de Pruebas de Compatibilidad
 
-#### 1. Browser Compatibility
-- Different browsers (Chrome, Firefox, Safari, Edge)
-- Different browser versions
+#### 1. Compatibilidad de Navegadores
+- Diferentes navegadores (Chrome, Firefox, Safari, Edge)
+- Diferentes versiones de navegadores
 
-#### 2. Operating System Compatibility
+#### 2. Compatibilidad de Sistemas Operativos
 - Windows, macOS, Linux
-- Different OS versions
+- Diferentes versiones de SO
 
-#### 3. Device Compatibility
-- Desktop, mobile, tablet
-- Different screen sizes and resolutions
+#### 3. Compatibilidad de Dispositivos
+- Escritorio, móvil, tablet
+- Diferentes tamaños de pantalla y resoluciones
 
-#### 4. Network Compatibility
-- Different network conditions
-- Bandwidth variations
+#### 4. Compatibilidad de Red
+- Diferentes condiciones de red
+- Variaciones de ancho de banda
 
-#### 5. Database Compatibility
-- Different database systems
-- Different database versions
+#### 5. Compatibilidad de Bases de Datos
+- Diferentes sistemas de bases de datos
+- Diferentes versiones de bases de datos
 
-### Tools for Compatibility Testing
-- **BrowserStack**: Cross-browser testing
-- **Sauce Labs**: Cloud testing platform
-- **LambdaTest**: Browser compatibility testing
-- **CrossBrowserTesting**: Multi-browser testing
+### Herramientas para Pruebas de Compatibilidad
+- **BrowserStack**: Pruebas multi-navegador
+- **Sauce Labs**: Plataforma de pruebas en la nube
+- **LambdaTest**: Pruebas de compatibilidad de navegadores
+- **CrossBrowserTesting**: Pruebas multi-navegador
